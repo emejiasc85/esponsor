@@ -16,6 +16,7 @@ class ProductController extends Controller
     public function __invoke()
     {
         $categories = Product::query()
+            ->search()
             ->with(['file', 'category'])
             ->paginateIf();
         return ProductResourse::collection($categories);
