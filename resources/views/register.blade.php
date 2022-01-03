@@ -20,7 +20,7 @@
                         @enderror
                     </div>
                     <div>
-                        <label class="text-gray-800 font-semibold block my-3 text-md" for="username">Username</label>
+                        <label class="text-gray-800 font-semibold block my-3 text-md" for="username">Usuario</label>
                         <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text" name="username" id="username" placeholder="username" />
                         @error('username')
                             <span class="text-sm text-red-500 ">{{ $message }}</span>
