@@ -23,7 +23,12 @@ class RegistrationController extends Controller
             'password' => 'required|confirmed'
         ]);
         
-        $user = User::create(request(['name', 'email', 'password', 'username']));
+        $user = User::create([
+            'name'     => $request->name,
+            'username' => $request->username,
+            'email'    => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
         
         auth()->login($user);
         
