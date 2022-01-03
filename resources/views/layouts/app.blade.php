@@ -7,7 +7,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div  class="bg-white">
+        <div  class="bg-white" id="app">
             @include('layouts.header')
             {{-- <div :class="cartOpen ? 'translate-x-0 ease-out' : 'translate-x-full ease-in'" class="fixed right-0 top-0 max-w-xs w-full h-full px-6 py-4 transition duration-300 transform overflow-y-auto bg-white border-l-2 border-gray-300">
                 <div class="flex items-center justify-between">
@@ -89,5 +89,6 @@
             </main>
             @include('layouts.footer')
         </div>
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

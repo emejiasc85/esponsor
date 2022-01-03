@@ -10,11 +10,20 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@vue/composition-api": "^1.4.3",
         "autoprefixer": "^10.4.0",
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.4.5",
-        "tailwindcss": "^2.2.4"
+        "tailwindcss": "^2.2.4",
+        "vue-loader": "^15.9.8",
+        "vue-template-compiler": "^2.6.14"
+    },
+    "dependencies": {
+        "@vueform/multiselect": "^2.3.1",
+        "sass-loader": "^12.4.0",
+        "vue": "^2.6.14",
+        "vue-tailwind-modal": "^1.0.7"
     }
 }

@@ -154,7 +154,6 @@ class ProductTest extends TestCase
                     'description' => ['El campo descripción es obligatorio.'],
                     'min_price'   => ['El campo precio mínimo es obligatorio.'],
                     'stock'       => ['El campo stock es obligatorio.'],
-                    'file'        => ['El campo imagen es obligatorio.'],
                     'category_id' => ['El campo categoría es obligatorio.'],
                 ]
             ]);

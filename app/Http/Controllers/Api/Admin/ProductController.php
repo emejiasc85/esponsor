@@ -18,6 +18,8 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::query()
+            ->where('user_id', auth()->id())
+            ->search()
             ->with(['category', 'file', 'user'])
             ->paginateIf();
 

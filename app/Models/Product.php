@@ -31,6 +31,17 @@ class Product extends Model
         return $this->morphOne(File::class, 'fileable');
     }
 
+    public function scopeSearch($query)
+    {
+        return $query->when(request()->filled('search'), function($query){
+            $query->where('title', 'LIKE', '%'.request()->search.'%')
+                ->orWhere('description', 'LIKE', '%'.request()->search.'%')
+                ->orWhereHas('category', function($query){
+                    $query->where('name', 'LIKE', '%'.request()->search.'%');
+                });
+        });
+    }
+
 
     /* methods */
 
