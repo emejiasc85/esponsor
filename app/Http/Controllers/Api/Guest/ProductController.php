@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api\Guest;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\Guest\CategoryResourse;
-use App\Models\Category;
+use App\Http\Resources\Guest\ProductResourse;
+use App\Models\Product;
 
-class CategoryController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class CategoryController extends Controller
      */
     public function __invoke()
     {
-        $categories = Category::query()
+        $categories = Product::query()
+            ->with(['file', 'category'])
             ->paginateIf();
-            
-        return CategoryResourse::collection($categories);
+        return ProductResourse::collection($categories);
     }
 }

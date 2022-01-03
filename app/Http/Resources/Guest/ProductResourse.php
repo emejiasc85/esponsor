@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Resources\Admin;
+namespace App\Http\Resources\Guest;
 
+use App\Http\Resources\Admin\FileResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ProductResourse extends JsonResource
@@ -20,9 +21,7 @@ class ProductResourse extends JsonResource
             'description' => $this->description,
             'stock'       => $this->stock,
             'min_price'   => $this->min_price,
-            'created_at'  => $this->created_at,
             'file'        => new FileResource($this->whenLoaded('file')),
-            'user'        => new UserResource($this->whenLoaded('user')),
             'category'    => new CategoryResourse($this->whenLoaded('category')),
         ];
     }

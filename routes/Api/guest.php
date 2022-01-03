@@ -1,5 +1,6 @@
 <?php
 
 Route::namespace('Guest')->group( function(){
-    Route::apiResource('/categories', CategoryController::class);
+    Route::get('/categories', CategoryController::class);
+    Route::get('/products', ProductController::class);
 });
