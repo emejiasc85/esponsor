@@ -175,5 +175,10 @@ return [
         'time'                  => 'hora',
         'subject'               => 'asunto',
         'message'               => 'Mensaje',
+        'title'                 => 'título',
+        'description'           => 'descripción',
+        'min_price'             => 'precio mínimo',
+        'category_id'           => 'categoría',
+        'file'                  => 'imagen',
     ],
 ];
