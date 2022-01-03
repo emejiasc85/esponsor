@@ -30,4 +30,13 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::middleware('auth:sanctum')->group(function(){
+    Route::get('/mis-productos', function () {
+        return view('my_products');
+    })->name('my-products');
+});
+
+
+
+
 
