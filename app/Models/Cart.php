@@ -31,7 +31,14 @@ class Cart extends Model
     public function addProducts()
     {
         foreach (request()->products as $item) {
-            $this->products()->create($item);
+            $this->products()->create([
+                'product_id' => $item['product_id'],
+                'quantity'   => $item['quantity'],
+                'real_price' => $item['real_price'],
+                'price'      => $item['price'],
+                'total'      => $item['total'],
+            ]);
+
             $product = Product::findOrFail($item['product_id']);
             $product->update([
                 'stock' => $product->stock - $item['quantity']

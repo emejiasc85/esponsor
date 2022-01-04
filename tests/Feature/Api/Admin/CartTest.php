@@ -32,7 +32,6 @@ class CartTest extends TestCase
     
     public function test_store_a_cart()
     {
-        $this->withoutExceptionHandling();
         $user = $this->signIn();
 
         $product = Product::factory()->create([

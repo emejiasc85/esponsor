@@ -45,7 +45,6 @@
                 <a class="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="/">Inicio</a>
                 @auth
                     <a class="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="{{route('my-products')}}">Mis productos</a>
-                    <a class="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Mi carrito</a>
                 @endauth
             </div>
         </nav>
